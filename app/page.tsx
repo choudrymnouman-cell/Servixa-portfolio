@@ -14,10 +14,11 @@ const stack=["React","Next.js","Flutter","Node.js","Python",".NET","AWS","Azure"
 const Arrow=()=> <span aria-hidden="true">↗</span>;
 
 export default function Home(){
+ const basePath=process.env.NEXT_PUBLIC_BASE_PATH ?? "";
  const [menuOpen,setMenuOpen]=useState(false); const [sent,setSent]=useState(false);
  return <main>
   <nav className="nav shell" aria-label="Primary navigation">
-   <a className="brand" href="#top" aria-label="Servixa home"><img className="brand-logo" src="/servixa-logo.webp" alt="Servixa"/></a>
+   <a className="brand" href="#top" aria-label="Servixa home"><img className="brand-logo" src={`${basePath}/servixa-logo.webp`} alt="Servixa"/></a>
    <button className="menu-button" onClick={()=>setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label="Toggle menu"><span/><span/></button>
    <div className={`nav-links ${menuOpen?"open":""}`}><a href="#services" onClick={()=>setMenuOpen(false)}>Services</a><a href="#industries" onClick={()=>setMenuOpen(false)}>Industries</a><a href="#about" onClick={()=>setMenuOpen(false)}>About</a><a href="#contact" onClick={()=>setMenuOpen(false)}>Contact</a></div>
    <a className="nav-cta" href="#contact">Start a project <Arrow/></a>
@@ -42,6 +43,6 @@ export default function Home(){
   <section className="stack-section shell"><p className="kicker">Technology</p><h2>The right stack.<br/><span>Never just the trendy one.</span></h2><div className="stack">{stack.map(x=><span key={x}>{x}</span>)}</div></section>
   <section id="contact" className="contact-section"><div className="shell contact-grid"><div><p className="kicker light">Start a conversation</p><h2>Have a bold idea?<br/><span>Let&apos;s make it real.</span></h2><p>Tell us where you want to go. We&apos;ll bring the strategy, engineering and support to get you there.</p><a href="mailto:servixaa@gmail.com">servixaa@gmail.com <Arrow/></a></div>
   {sent?<div className="success"><div>✓</div><h3>Message received.</h3><p>Thanks for reaching out. The Servixa team will connect with you soon.</p><button onClick={()=>setSent(false)}>Send another</button></div>:<form onSubmit={e=>{e.preventDefault();setSent(true)}}><label>Name<input required name="name" placeholder="Your name"/></label><label>Work email<input required type="email" name="email" placeholder="you@company.com"/></label><label>Company<input name="company" placeholder="Company name"/></label><label>What do you need?<select name="service" defaultValue=""><option value="" disabled>Select a service</option>{services.map(s=><option key={s.n}>{s.title}</option>)}</select></label><label className="full">Project details<textarea required name="details" placeholder="Tell us a little about your goals..." rows={4}/></label><button className="button primary full" type="submit">Send inquiry <Arrow/></button></form>}</div></section>
-  <footer className="footer shell"><div className="brand"><img className="brand-logo" src="/servixa-logo.webp" alt="Servixa"/></div><p>Engineering possibility. Delivering certainty.</p><div><a href="#services">Services</a><a href="#industries">Industries</a><a href="#contact">Contact</a></div><small>© {new Date().getFullYear()} Servixa. All rights reserved.</small></footer>
+  <footer className="footer shell"><div className="brand"><img className="brand-logo" src={`${basePath}/servixa-logo.webp`} alt="Servixa"/></div><p>Engineering possibility. Delivering certainty.</p><div><a href="#services">Services</a><a href="#industries">Industries</a><a href="#contact">Contact</a></div><small>© {new Date().getFullYear()} Servixa. All rights reserved.</small></footer>
  </main>;
 }
