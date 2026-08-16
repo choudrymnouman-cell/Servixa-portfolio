@@ -1,15 +1,9 @@
 import type { NextConfig } from "next";
 
-const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
-const repoBasePath = "/Servixa-portfolio";
-
 const nextConfig: NextConfig = {
+  // Keep the same source deployable on Render's static `out` workflow.
   output: "export",
-  trailingSlash: true,
   images: { unoptimized: true },
-  typescript: { ignoreBuildErrors: true },
-  basePath: isGitHubPages ? repoBasePath : "",
-  assetPrefix: isGitHubPages ? repoBasePath : "",
 };
 
 export default nextConfig;
