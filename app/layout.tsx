@@ -59,7 +59,7 @@ export const metadata: Metadata = {
       "Software, web and mobile development, AI automation, cloud, cybersecurity and global IT services.",
   },
   alternates: {
-    languages: { "en": "/" },
+    languages: { en: "/" },
   },
   other: {
     "codex-preview": "development",
@@ -112,7 +112,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <head>
-        <link rel="privacy-policy" href="/privacy" />
+        <link rel="privacy-policy" href="/privacy/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -124,18 +124,21 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           aria-label="Legal information"
           style={{
             display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
             justifyContent: "center",
-            gap: "20px",
-            flexWrap: "wrap",
-            padding: "18px 24px 26px",
+            gap: "14px",
+            padding: "22px 24px 120px",
             background: "#070a13",
-            color: "#aab3c5",
-            fontSize: "13px",
+            color: "#d5d9e4",
+            fontSize: "14px",
+            textAlign: "center",
+            lineHeight: 1.5,
           }}
         >
-          <a href="/privacy" style={{ color: "inherit", textDecoration: "none" }}>Privacy Policy</a>
-          <a href="/terms" style={{ color: "inherit", textDecoration: "none" }}>Terms & Conditions</a>
-          <a href="mailto:servixaa@gmail.com" style={{ color: "inherit", textDecoration: "none" }}>Contact Servixa</a>
+          <a href="/privacy/" style={{ color: "inherit", textDecoration: "none", padding: "6px 12px" }}>Privacy Policy</a>
+          <a href="/terms/" style={{ color: "inherit", textDecoration: "none", padding: "6px 12px" }}>Terms & Conditions</a>
+          <a href="mailto:servixaa@gmail.com" style={{ color: "inherit", textDecoration: "none", padding: "6px 12px" }}>Contact Servixa</a>
         </nav>
       </body>
     </html>
