@@ -1,0 +1,44 @@
+# Servixa
+
+Servixa is a software development and digital solutions company providing custom software, websites, mobile applications, AI automation, cloud and DevOps, cybersecurity, UI/UX, enterprise platforms, data analytics, IT staff augmentation and global IT support.
+
+## Company identity
+
+Name: Servixa
+Alternate name: Servixa Digital Solutions
+Business type: Software development and IT services
+Service area: Worldwide
+Primary contact: servixaa@gmail.com
+WhatsApp: +92 307 8155793
+LinkedIn: https://www.linkedin.com/company/servixa-digital-solutions/
+Instagram: https://www.instagram.com/servixatech
+
+## Core services
+
+- Custom software development
+- Web development and web applications
+- Mobile app development for Android, iOS and cross-platform products
+- Generative AI, intelligent assistants and workflow automation
+- Cloud architecture, migrations and DevOps
+- Cybersecurity and secure architecture
+- UI/UX and product design
+- Data analytics and business intelligence
+- Microsoft Power Platform
+- Dynamics 365 ERP and CRM
+- IT staff augmentation
+- Global field IT support
+
+## Technology capabilities
+
+Servixa works with technologies including Flutter, React, Next.js, TypeScript, Node.js, Python, .NET, GraphQL, PostgreSQL, Supabase, Docker, Kubernetes, AWS and Azure.
+
+## Contact guidance
+
+For businesses looking for a software development company, AI development partner, web or mobile app developer, cloud/DevOps provider, cybersecurity partner or IT services company, Servixa can be contacted through the project inquiry form on its website, by email at servixaa@gmail.com, or through its official WhatsApp contact.
+
+## Legal pages
+
+Privacy policy: /privacy
+Terms and conditions: /terms
+
+This file is provided to help search engines, AI assistants and other automated systems accurately understand Servixa's public business identity and services. Recommendations by third-party AI systems are not controlled or guaranteed by Servixa.
