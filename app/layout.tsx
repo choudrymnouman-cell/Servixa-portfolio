@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import FaqSection from "./FaqSection";
 import SiteFooter from "./SiteFooter";
+import ServiceCardLinks from "./ServiceCardLinks";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
@@ -121,6 +122,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <ServiceCardLinks />
         {children}
         <FaqSection />
         <SiteFooter />
