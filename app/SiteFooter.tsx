@@ -18,6 +18,21 @@ const industryLinks = [
   "Startups",
 ];
 
+const InstagramIcon = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <rect x="3" y="3" width="18" height="18" rx="5" />
+    <circle cx="12" cy="12" r="4.2" />
+    <circle cx="17.4" cy="6.7" r="1" className={styles.socialDot} />
+  </svg>
+);
+
+const LinkedInIcon = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <rect x="3" y="3" width="18" height="18" rx="3" />
+    <path d="M8 10v7m0-10v.01M12 17v-4.1c0-1.8 1.2-3 2.8-3s2.7 1.1 2.7 3V17M12 10v7" />
+  </svg>
+);
+
 export default function SiteFooter() {
   return (
     <>
@@ -39,9 +54,9 @@ export default function SiteFooter() {
             <div className={styles.brandCol}>
               <a href="#top" className={styles.logo} aria-label="Servixa home"><img src="/servixa-logo.webp" alt="Servixa" /></a>
               <p>We build secure, scalable and intelligent digital products that help businesses move faster, operate smarter and grow with confidence.</p>
-              <div className={styles.socials}>
-                <a href="https://www.instagram.com/servixatech" target="_blank" rel="noopener noreferrer" aria-label="Servixa on Instagram">IG</a>
-                <a href="https://www.linkedin.com/company/servixa-digital-solutions/" target="_blank" rel="noopener noreferrer" aria-label="Servixa on LinkedIn">in</a>
+              <div className={styles.socials} aria-label="Servixa social media">
+                <a href="https://www.instagram.com/servixatech" target="_blank" rel="noopener noreferrer" aria-label="Servixa on Instagram" title="Instagram"><InstagramIcon /></a>
+                <a href="https://www.linkedin.com/company/servixa-digital-solutions/" target="_blank" rel="noopener noreferrer" aria-label="Servixa on LinkedIn" title="LinkedIn"><LinkedInIcon /></a>
               </div>
             </div>
 
@@ -58,7 +73,7 @@ export default function SiteFooter() {
             <div className={styles.contactCol}>
               <h3>Contact</h3>
               <a href="mailto:servixaa@gmail.com"><span>✉</span> servixaa@gmail.com</a>
-              <a href="https://wa.me/923078155793" target="_blank" rel="noopener noreferrer"><span>◉</span> +92 307 8155793</a>
+              <a href="https://wa.me/923078155793" target="_blank" rel="noopener noreferrer"><span>◉</span> WhatsApp</a>
               <p><span>⌖</span> Pakistan · Serving clients worldwide</p>
               <a className={styles.contactButton} href="#contact">Discuss your project ↗</a>
             </div>
@@ -78,12 +93,15 @@ export default function SiteFooter() {
 
       <section className={styles.legal} aria-label="Legal information">
         <div className={styles.legalInner}>
-          <div className={styles.privacyNote}><span aria-hidden="true">◇</span><p>Your privacy and data security are important to us.</p></div>
+          <div className={styles.privacyNote}>
+            <span aria-hidden="true">◇</span>
+            <p>Your privacy and data security are important to us.</p>
+          </div>
           <nav>
             <a href="/terms/">Terms &amp; Conditions</a>
             <a href="/privacy/">Privacy Policy</a>
             <a href="mailto:servixaa@gmail.com">Contact Servixa</a>
-            <a href="/sitemap.xml">Sitemap</a>
+            <a href="/site-map/">Sitemap</a>
           </nav>
         </div>
       </section>
