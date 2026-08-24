@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import FaqSection from "./FaqSection";
+import SiteFooter from "./SiteFooter";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
@@ -122,26 +123,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
         <FaqSection />
-        <nav
-          aria-label="Legal information"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "14px",
-            padding: "22px 24px 120px",
-            background: "#070a13",
-            color: "#d5d9e4",
-            fontSize: "14px",
-            textAlign: "center",
-            lineHeight: 1.5,
-          }}
-        >
-          <a href="/privacy/" style={{ color: "inherit", textDecoration: "none", padding: "6px 12px" }}>Privacy Policy</a>
-          <a href="/terms/" style={{ color: "inherit", textDecoration: "none", padding: "6px 12px" }}>Terms & Conditions</a>
-          <a href="mailto:servixaa@gmail.com" style={{ color: "inherit", textDecoration: "none", padding: "6px 12px" }}>Contact Servixa</a>
-        </nav>
+        <SiteFooter />
       </body>
     </html>
   );
