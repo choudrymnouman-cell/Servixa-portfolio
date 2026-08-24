@@ -19,38 +19,47 @@ const slugByTitle: Record<string, string> = {
 
 export default function ServiceCardLinks() {
   useEffect(() => {
-    const cards = Array.from(document.querySelectorAll<HTMLElement>(".service-card"));
+    const enhanceCards = () => {
+      const cards = Array.from(document.querySelectorAll<HTMLElement>(".service-card"));
 
-    cards.forEach((card) => {
-      const title = card.querySelector("h3")?.textContent?.trim() || "";
-      const slug = slugByTitle[title];
-      if (!slug) return;
+      cards.forEach((card) => {
+        if (card.dataset.serviceLinked === "true") return;
+        const title = card.querySelector("h3")?.textContent?.trim() || "";
+        const slug = slugByTitle[title];
+        if (!slug) return;
 
-      const href = `/services/${slug}/`;
-      card.setAttribute("role", "link");
-      card.setAttribute("tabindex", "0");
-      card.setAttribute("aria-label", `View ${title} service details`);
-      card.style.cursor = "pointer";
+        const href = `/services/${slug}/`;
+        card.dataset.serviceLinked = "true";
+        card.setAttribute("role", "link");
+        card.setAttribute("tabindex", "0");
+        card.setAttribute("aria-label", `View ${title} service details`);
+        card.style.cursor = "pointer";
 
-      const existingLink = card.querySelector<HTMLAnchorElement>(".service-link");
-      if (existingLink) {
-        existingLink.href = href;
-        existingLink.textContent = "Explore this service ↗";
-      }
-
-      const navigate = () => { window.location.href = href; };
-      card.addEventListener("click", (event) => {
-        const target = event.target as HTMLElement;
-        if (target.closest("a,button,input,select,textarea")) return;
-        navigate();
-      });
-      card.addEventListener("keydown", (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          navigate();
+        const existingLink = card.querySelector<HTMLAnchorElement>(".service-link");
+        if (existingLink) {
+          existingLink.href = href;
+          existingLink.textContent = "Explore this service ↗";
         }
+
+        const navigate = () => { window.location.href = href; };
+        card.addEventListener("click", (event) => {
+          const target = event.target as HTMLElement;
+          if (target.closest("a,button,input,select,textarea")) return;
+          navigate();
+        });
+        card.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            navigate();
+          }
+        });
       });
-    });
+    };
+
+    enhanceCards();
+    const observer = new MutationObserver(enhanceCards);
+    observer.observe(document.body, { childList: true, subtree: true });
+    return () => observer.disconnect();
   }, []);
 
   return null;
