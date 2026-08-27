@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { serviceBySlug, serviceDetails } from "../service-data";
+import { marketingServiceBySlug, marketingServiceDetails } from "../marketing-service-data";
 import styles from "../service-page.module.css";
 
+const allServiceDetails = [...marketingServiceDetails, ...serviceDetails];
+const allServiceBySlug = { ...serviceBySlug, ...marketingServiceBySlug };
+
 export function generateStaticParams() {
-  return serviceDetails.map((service) => ({ slug: service.slug }));
+  return allServiceDetails.map((service) => ({ slug: service.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const service = serviceBySlug[slug];
+  const service = allServiceBySlug[slug];
   if (!service) return {};
   return {
     title: `${service.title} Services`,
@@ -25,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const service = serviceBySlug[slug];
+  const service = allServiceBySlug[slug];
   if (!service) notFound();
 
   const schema = {
@@ -87,10 +91,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div className={styles.shell}>
           <div className={styles.sectionHead}>
             <h2>Outcomes we work toward.</h2>
-            <p>Technology should improve how the business performs. Our goal is to create useful, maintainable solutions that give clients visible operational and customer value.</p>
+            <p>Technology and marketing should improve how the business performs. Our goal is to create useful, maintainable solutions that give clients visible customer and commercial value.</p>
           </div>
           <div className={styles.grid}>
-            {service.outcomes.map((item, index) => (
+            {service.outcomes.map((item) => (
               <article className={styles.card} key={item}><div className={styles.number}>✓</div><strong>{item}</strong><p>We validate priorities with the client and measure success against the agreed business objective.</p></article>
             ))}
           </div>
@@ -114,10 +118,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className={styles.section}>
         <div className={styles.shell}>
           <div className={styles.sectionHead}>
-            <h2>Technology & fit.</h2>
-            <p>We choose tools for maintainability, security and business fit—not simply because they are fashionable.</p>
+            <h2>Tools & fit.</h2>
+            <p>We choose tools and channels for maintainability, measurement and business fit—not simply because they are fashionable.</p>
           </div>
-          <h3>Typical technologies</h3>
+          <h3>Typical tools and technologies</h3>
           <div className={styles.pills}>{service.technologies.map((tech) => <span className={styles.pill} key={tech}>{tech}</span>)}</div>
           <h3 style={{ marginTop: 34 }}>Often a good fit for</h3>
           <div className={styles.pills}>{service.idealFor.map((item) => <span className={styles.pill} key={item}>{item}</span>)}</div>
