@@ -58,6 +58,13 @@ function applySecurityHeaders(res) {
   res.removeHeader("X-Powered-By");
 }
 
+function isSensitiveProbe(pathname) {
+  const lower = pathname.toLowerCase();
+  return ["/.env", "/.git", "/.svn", "/.hg", "/wp-admin", "/wp-login", "/phpmyadmin"].some((probe) =>
+    lower === probe || lower.startsWith(`${probe}/`)
+  );
+}
+
 function safePathFromRequest(requestUrl) {
   let pathname;
   try {
@@ -66,7 +73,7 @@ function safePathFromRequest(requestUrl) {
     return null;
   }
 
-  if (pathname.includes("\0") || pathname.includes("\\")) return null;
+  if (pathname.includes("\0") || pathname.includes("\\") || isSensitiveProbe(pathname)) return null;
   const relative = pathname.replace(/^\/+/, "");
   const candidate = path.resolve(OUT_DIR, relative);
   if (candidate !== OUT_DIR && !candidate.startsWith(`${OUT_DIR}${path.sep}`)) return null;
@@ -96,13 +103,20 @@ function resolveFile(requestUrl) {
   return null;
 }
 
-const server = http.createServer((req, res) => {
+const server = http.createServer({ maxHeaderSize: 16 * 1024 }, (req, res) => {
   applySecurityHeaders(res);
 
   if (!req.url || !["GET", "HEAD"].includes(req.method || "")) {
     res.statusCode = 405;
     res.setHeader("Allow", "GET, HEAD");
     res.end("Method Not Allowed");
+    return;
+  }
+
+  const contentLength = Number(req.headers["content-length"] || 0);
+  if (contentLength > 0 || req.headers["transfer-encoding"]) {
+    res.statusCode = 413;
+    res.end("Request body not accepted");
     return;
   }
 
@@ -138,6 +152,11 @@ const server = http.createServer((req, res) => {
   });
   stream.pipe(res);
 });
+
+server.headersTimeout = 10_000;
+server.requestTimeout = 10_000;
+server.keepAliveTimeout = 5_000;
+server.maxRequestsPerSocket = 100;
 
 server.listen(PORT, "0.0.0.0", () => {
   console.log(`Servixa secure static server listening on port ${PORT}`);
