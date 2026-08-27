@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "npx serve out -l $PORT",
+    "start": "node server.mjs",
     "test": "npm run build",
     "lint": "next lint"
   },
