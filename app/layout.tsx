@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "./home-trust.css";
 import FaqSection from "./FaqSection";
 import SiteFooter from "./SiteFooter";
 import ServiceCardLinks from "./ServiceCardLinks";
@@ -10,27 +11,30 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   title: {
-    default: "Servixa | Software Development, AI, Cloud & IT Services",
+    default: "Servixa | Mobile Apps, Web Development, Google Ads & SEO",
     template: "%s | Servixa",
   },
   description:
-    "Servixa is a software development and digital solutions company providing web and mobile app development, AI automation, cloud and DevOps, cybersecurity, UI/UX, enterprise platforms and global IT services.",
+    "Servixa is a digital solutions company specializing in mobile app development, web development, Google Ads, Meta Ads, SEO, digital marketing, UI/UX and custom software. 4+ years of experience with 100+ projects delivered.",
   applicationName: "Servixa",
   keywords: [
     "Servixa",
     "Servixa Digital Solutions",
-    "software development company",
+    "mobile app development company",
     "web development company",
-    "mobile app development",
-    "AI development company",
-    "AI automation services",
-    "cloud DevOps services",
-    "cybersecurity services",
-    "IT staff augmentation",
-    "global IT services",
+    "Google Ads services",
+    "Meta Ads services",
+    "SEO services",
+    "digital marketing company",
+    "social media marketing",
     "custom software development",
     "Flutter development",
     "Next.js development",
+    "website development Kot Addu",
+    "web development Islamabad",
+    "web development Lahore",
+    "web development Multan",
+    "digital agency Pakistan",
   ],
   authors: [{ name: "Servixa" }],
   creator: "Servixa",
@@ -51,19 +55,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Servixa",
-    title: "Servixa | Software Development, AI, Cloud & IT Services",
+    title: "Servixa | Mobile Apps, Web Development, Google Ads & SEO",
     description:
-      "Build websites, mobile apps, AI solutions, cloud systems and secure digital products with Servixa.",
+      "Build mobile apps and websites, grow with Google and Meta Ads, and improve search visibility with Servixa.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Servixa | Software Development, AI, Cloud & IT Services",
+    title: "Servixa | Mobile Apps, Web Development, Google Ads & SEO",
     description:
-      "Software, web and mobile development, AI automation, cloud, cybersecurity and global IT services.",
+      "Mobile apps, websites, Google Ads, Meta Ads, SEO, digital marketing and custom software from Servixa.",
   },
-  alternates: {
-    languages: { en: "/" },
-  },
+  alternates: { languages: { en: "/" } },
   other: {
     "codex-preview": "development",
     "business:contact_data:email": "servixaa@gmail.com",
@@ -79,8 +81,9 @@ const organizationSchema = {
   name: "Servixa",
   alternateName: "Servixa Digital Solutions",
   description:
-    "Software development and digital solutions company providing web and mobile development, AI automation, cloud, cybersecurity, enterprise platforms and global IT services.",
+    "Digital solutions company specializing in mobile app development, web development, Google Ads, Meta Ads, SEO, digital marketing, UI/UX and custom software.",
   email: "servixaa@gmail.com",
+  areaServed: ["Kot Addu", "Islamabad", "Lahore", "Multan", "New Zealand", "Dubai", "Australia", "Germany"],
   contactPoint: [
     {
       "@type": "ContactPoint",
@@ -96,18 +99,17 @@ const organizationSchema = {
     "https://www.linkedin.com/company/servixa-digital-solutions/",
   ],
   knowsAbout: [
-    "Custom Software Development",
-    "Web Development",
     "Mobile App Development",
+    "Web Development",
+    "Google Ads",
+    "Meta Ads",
+    "Search Engine Optimization",
+    "Digital Marketing",
+    "Social Media Marketing",
+    "UI/UX Design",
+    "Custom Software Development",
     "Generative AI and Automation",
     "Cloud and DevOps",
-    "Cybersecurity",
-    "UI/UX Design",
-    "Data Analytics",
-    "Microsoft Power Platform",
-    "Dynamics 365",
-    "IT Staff Augmentation",
-    "Global IT Support",
   ],
 };
 
@@ -116,10 +118,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <head>
         <link rel="privacy-policy" href="/privacy/" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ServiceCardLinks />
