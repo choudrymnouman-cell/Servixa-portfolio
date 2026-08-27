@@ -3,18 +3,18 @@
 import { useEffect } from "react";
 
 const slugByTitle: Record<string, string> = {
-  "Generative AI & Automation": "generative-ai-automation",
-  "Dynamics 365 ERP & CRM": "dynamics-365-erp-crm",
   "Mobile App Development": "mobile-app-development",
-  "IT Staff Augmentation": "it-staff-augmentation",
-  "Cloud & DevOps": "cloud-devops",
-  "UI/UX & Product Design": "ui-ux-product-design",
   "Web Development": "web-development",
+  "Google Ads & PPC": "google-ads-ppc",
+  "SEO & Search Growth": "seo-search-growth",
+  "Meta Ads & Social Marketing": "meta-ads-social-marketing",
+  "Digital Marketing": "digital-marketing",
   "Custom Software Development": "custom-software-development",
+  "UI/UX & Product Design": "ui-ux-product-design",
+  "Generative AI & Automation": "generative-ai-automation",
+  "Cloud & DevOps": "cloud-devops",
   "Cybersecurity": "cybersecurity",
   "Data Analytics & Insights": "data-analytics-insights",
-  "Microsoft Power Platform": "microsoft-power-platform",
-  "Cloud Applications & Integration": "cloud-applications-integration",
 };
 
 export default function ServiceCardLinks() {
