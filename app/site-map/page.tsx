@@ -3,7 +3,7 @@ import styles from "./site-map.module.css";
 
 export const metadata: Metadata = {
   title: "Sitemap | Servixa",
-  description: "Browse Servixa services, industries, contact information and legal pages.",
+  description: "Browse Servixa mobile app development, web development, Google Ads, SEO, digital marketing and company pages.",
 };
 
 const groups = [
@@ -17,21 +17,22 @@ const groups = [
     ],
   },
   {
-    title: "Services",
+    title: "Core Services",
     links: [
-      ["Web Development", "/#services"],
-      ["Mobile App Development", "/#services"],
-      ["AI & Automation", "/#services"],
-      ["Cloud & DevOps", "/#services"],
-      ["Cybersecurity", "/#services"],
-      ["UI/UX & Product Design", "/#services"],
+      ["Mobile App Development", "/services/mobile-app-development/"],
+      ["Web Development", "/services/web-development/"],
+      ["Google Ads & PPC", "/services/google-ads-ppc/"],
+      ["SEO & Search Growth", "/services/seo-search-growth/"],
+      ["Meta Ads & Social Marketing", "/services/meta-ads-social-marketing/"],
+      ["Digital Marketing", "/services/digital-marketing/"],
     ],
   },
   {
     title: "Explore",
     links: [
+      ["All Services", "/#services"],
       ["Industries", "/#industries"],
-      ["Work", "/#work"],
+      ["Featured Work", "/#work"],
       ["Start a Project", "/#contact"],
     ],
   },
@@ -55,7 +56,7 @@ export default function SiteMapPage() {
         </a>
         <p className={styles.kicker}>Navigation</p>
         <h1>Servixa Sitemap</h1>
-        <p className={styles.intro}>Find the main Servixa pages, services, industry information and legal resources in one place.</p>
+        <p className={styles.intro}>Find Servixa development, advertising, SEO, marketing, company and legal pages in one place.</p>
 
         <div className={styles.grid}>
           {groups.map((group) => (
