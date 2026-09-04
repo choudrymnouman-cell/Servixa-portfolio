@@ -17,10 +17,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!service) return {};
   return {
     title: `${service.title} Services`,
-    description: `${service.summary} Learn what Servixa provides, how we deliver it and the outcomes we focus on for clients.`,
+    description: `${service.summary} Learn what LevelServe provides, how we deliver it and the outcomes we focus on for clients.`,
     alternates: { canonical: `/services/${service.slug}/` },
     openGraph: {
-      title: `${service.title} | Servixa`,
+      title: `${service.title} | LevelServe`,
       description: service.summary,
       type: "website",
     },
@@ -37,7 +37,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     "@type": "Service",
     name: service.title,
     description: service.summary,
-    provider: { "@type": "Organization", name: "Servixa" },
+    provider: { "@type": "Organization", name: "LevelServe" },
     areaServed: "Worldwide",
     url: `https://servixa-bzem.onrender.com/services/${service.slug}/`,
   };
@@ -47,7 +47,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <div className={styles.shell}>
         <nav className={styles.nav} aria-label="Service page navigation">
-          <a href="/" aria-label="Servixa home"><img src="/servixa-logo.webp" alt="Servixa" /></a>
+          <a href="/" aria-label="LevelServe home"><img src="/levelserve-logo.svg" alt="LevelServe" /></a>
           <div className={styles.navLinks}>
             <a href="/#services">Services</a>
             <a href="/#industries">Industries</a>
@@ -76,7 +76,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className={styles.section}>
         <div className={styles.shell}>
           <div className={styles.sectionHead}>
-            <h2>What Servixa can provide.</h2>
+            <h2>What LevelServe can provide.</h2>
             <p>We shape the engagement around your goals, existing systems, users and budget. These are the core capabilities we can bring into a {service.title.toLowerCase()} project.</p>
           </div>
           <div className={styles.grid}>
@@ -131,10 +131,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className={styles.finalCta}>
         <div className={styles.shell}>
           <div className={styles.finalBox}>
-            <div><h2>Have a {service.title.toLowerCase()} project?</h2><p>Share your goals with Servixa and we&apos;ll help you define a practical next step.</p></div>
+            <div><h2>Have a {service.title.toLowerCase()} project?</h2><p>Share your goals with LevelServe and we&apos;ll help you define a practical next step.</p></div>
             <a className={styles.cta} href="/#contact">Start a conversation ↗</a>
           </div>
-          <footer className={styles.footer}><span>© {new Date().getFullYear()} Servixa. All rights reserved.</span><span><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/sitemap/">Sitemap</a></span></footer>
+          <footer className={styles.footer}><span>© {new Date().getFullYear()} LevelServe. All rights reserved.</span><span><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/sitemap/">Sitemap</a></span></footer>
         </div>
       </section>
     </main>

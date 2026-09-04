@@ -11,15 +11,15 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   title: {
-    default: "Servixa | Mobile Apps, Web Development, Google Ads & SEO",
-    template: "%s | Servixa",
+    default: "LevelServe | Mobile Apps, Web Development, Google Ads & SEO",
+    template: "%s | LevelServe",
   },
   description:
-    "Servixa is a digital solutions company specializing in mobile app development, web development, Google Ads, Meta Ads, SEO, digital marketing, UI/UX and custom software. 4+ years of experience with 100+ projects delivered.",
-  applicationName: "Servixa",
+    "LevelServe is a digital solutions company specializing in mobile app development, web development, Google Ads, Meta Ads, SEO, digital marketing, UI/UX and custom software. 4+ years of experience with 100+ projects delivered.",
+  applicationName: "LevelServe",
   keywords: [
-    "Servixa",
-    "Servixa Digital Solutions",
+    "LevelServe",
+    "LevelServe Digital Solutions",
     "mobile app development company",
     "web development company",
     "Google Ads services",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     "web development Multan",
     "digital agency Pakistan",
   ],
-  authors: [{ name: "Servixa" }],
-  creator: "Servixa",
-  publisher: "Servixa",
+  authors: [{ name: "LevelServe" }],
+  creator: "LevelServe",
+  publisher: "LevelServe",
   category: "technology",
   robots: {
     index: true,
@@ -54,16 +54,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Servixa",
-    title: "Servixa | Mobile Apps, Web Development, Google Ads & SEO",
+    siteName: "LevelServe",
+    title: "LevelServe | Mobile Apps, Web Development, Google Ads & SEO",
     description:
-      "Build mobile apps and websites, grow with Google and Meta Ads, and improve search visibility with Servixa.",
+      "Build mobile apps and websites, grow with Google and Meta Ads, and improve search visibility with LevelServe.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Servixa | Mobile Apps, Web Development, Google Ads & SEO",
+    title: "LevelServe | Mobile Apps, Web Development, Google Ads & SEO",
     description:
-      "Mobile apps, websites, Google Ads, Meta Ads, SEO, digital marketing and custom software from Servixa.",
+      "Mobile apps, websites, Google Ads, Meta Ads, SEO, digital marketing and custom software from LevelServe.",
   },
   alternates: { languages: { en: "/" } },
   other: {
@@ -78,8 +78,8 @@ export const viewport: Viewport = { width: "device-width", initialScale: 1, maxi
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Servixa",
-  alternateName: "Servixa Digital Solutions",
+  name: "LevelServe",
+  alternateName: "LevelServe Digital Solutions",
   description:
     "Digital solutions company specializing in mobile app development, web development, Google Ads, Meta Ads, SEO, digital marketing, UI/UX and custom software.",
   email: "servixaa@gmail.com",

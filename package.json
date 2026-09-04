@@ -1,5 +1,5 @@
 {
-  "name": "servixa-portfolio",
+  "name": "levelserve-portfolio",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -29,5 +29,5 @@
     "typescript": "5.9.3"
   },
   "type": "module",
-  "displayName": "Servixa"
+  "displayName": "LevelServe"
 }

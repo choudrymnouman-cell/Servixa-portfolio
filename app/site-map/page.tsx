@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import styles from "./site-map.module.css";
 
 export const metadata: Metadata = {
-  title: "Sitemap | Servixa",
-  description: "Browse Servixa mobile app development, web development, Google Ads, SEO, digital marketing and company pages.",
+  title: "Sitemap | LevelServe",
+  description: "Browse LevelServe mobile app development, web development, Google Ads, SEO, digital marketing and company pages.",
 };
 
 const groups = [
@@ -11,7 +11,7 @@ const groups = [
     title: "Company",
     links: [
       ["Home", "/"],
-      ["About Servixa", "/#about"],
+      ["About LevelServe", "/#about"],
       ["Contact", "/#contact"],
       ["Frequently Asked Questions", "/#faq"],
     ],
@@ -51,12 +51,12 @@ export default function SiteMapPage() {
     <main className={styles.page}>
       <div className={styles.glow} aria-hidden="true" />
       <section className={styles.shell}>
-        <a className={styles.logo} href="/" aria-label="Back to Servixa home">
-          <img src="/servixa-logo.webp" alt="Servixa" />
+        <a className={styles.logo} href="/" aria-label="Back to LevelServe home">
+          <img src="/levelserve-logo.svg" alt="LevelServe" />
         </a>
         <p className={styles.kicker}>Navigation</p>
-        <h1>Servixa Sitemap</h1>
-        <p className={styles.intro}>Find Servixa development, advertising, SEO, marketing, company and legal pages in one place.</p>
+        <h1>LevelServe Sitemap</h1>
+        <p className={styles.intro}>Find LevelServe development, advertising, SEO, marketing, company and legal pages in one place.</p>
 
         <div className={styles.grid}>
           {groups.map((group) => (
@@ -73,7 +73,7 @@ export default function SiteMapPage() {
 
         <div className={styles.bottom}>
           <p>Looking for something specific?</p>
-          <a href="/#contact">Contact Servixa <span aria-hidden="true">↗</span></a>
+          <a href="/#contact">Contact LevelServe <span aria-hidden="true">↗</span></a>
         </div>
       </section>
     </main>

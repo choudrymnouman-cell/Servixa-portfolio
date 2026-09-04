@@ -3,7 +3,7 @@ import styles from "../legal.module.css";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Read how Servixa handles information submitted through its website, contact form and external communication channels.",
+  description: "Read how LevelServe handles information submitted through its website, contact form and external communication channels.",
   robots: { index: true, follow: true },
 };
 
@@ -11,11 +11,11 @@ export default function PrivacyPage() {
   return (
     <main className={styles.page}>
       <div className={styles.shell}>
-        <a className={styles.back} href="/">← Back to Servixa</a>
+        <a className={styles.back} href="/">← Back to LevelServe</a>
         <p className={styles.eyebrow}>Legal · Privacy</p>
         <h1 className={styles.title}>Privacy Policy</h1>
         <p className={styles.intro}>
-          This Privacy Policy explains how Servixa handles personal information when you visit our website, submit a project inquiry, contact us by email or WhatsApp, or interact with links to our social channels.
+          This Privacy Policy explains how LevelServe handles personal information when you visit our website, submit a project inquiry, contact us by email or WhatsApp, or interact with links to our social channels.
         </p>
         <p className={styles.updated}>Last updated: 23 August 2026</p>
 
@@ -38,13 +38,13 @@ export default function PrivacyPage() {
 
         <section className={styles.card}>
           <h2>3. Contact form and service providers</h2>
-          <p>Servixa currently uses FormSubmit to transmit website inquiry form submissions to our business email inbox. Information submitted through that form is therefore processed by FormSubmit and by the email services used to receive and manage the inquiry.</p>
+          <p>LevelServe currently uses FormSubmit to transmit website inquiry form submissions to our business email inbox. Information submitted through that form is therefore processed by FormSubmit and by the email services used to receive and manage the inquiry.</p>
           <p>We may also rely on hosting, infrastructure and communication providers that process limited information on our behalf to operate the website and respond to you.</p>
         </section>
 
         <section className={styles.card}>
           <h2>4. External services and links</h2>
-          <p>Our website may link to third-party services including WhatsApp, LinkedIn and Instagram. If you follow those links or communicate with us through those services, the relevant provider may process information under its own privacy policy. Servixa does not control those third-party privacy practices.</p>
+          <p>Our website may link to third-party services including WhatsApp, LinkedIn and Instagram. If you follow those links or communicate with us through those services, the relevant provider may process information under its own privacy policy. LevelServe does not control those third-party privacy practices.</p>
         </section>
 
         <section className={styles.card}>
@@ -78,11 +78,11 @@ export default function PrivacyPage() {
         </section>
 
         <section className={styles.card}>
-          <h2>11. Contact Servixa</h2>
-          <p>For privacy questions or requests, email <a href="mailto:servixaa@gmail.com">servixaa@gmail.com</a>. You can also use the contact section on the Servixa website for general business inquiries.</p>
+          <h2>11. Contact LevelServe</h2>
+          <p>For privacy questions or requests, email <a href="mailto:servixaa@gmail.com">servixaa@gmail.com</a>. You can also use the contact section on the LevelServe website for general business inquiries.</p>
         </section>
 
-        <div className={styles.note}>This policy is written to describe the current website behavior. It should be reviewed whenever Servixa adds analytics, advertising, user accounts, payment processing, newsletters or other systems that collect additional personal information.</div>
+        <div className={styles.note}>This policy is written to describe the current website behavior. It should be reviewed whenever LevelServe adds analytics, advertising, user accounts, payment processing, newsletters or other systems that collect additional personal information.</div>
 
         <div className={styles.footer}>
           <a href="/">Home</a>

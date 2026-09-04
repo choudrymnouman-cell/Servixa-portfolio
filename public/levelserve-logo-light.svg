@@ -1,0 +1,11 @@
+<svg width="470" height="92" viewBox="0 0 470 92" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">LevelServe Technologies</title>
+  <desc id="desc">Light LevelServe Technologies wordmark</desc>
+  <defs><linearGradient id="mark" x1="8" y1="10" x2="86" y2="84" gradientUnits="userSpaceOnUse"><stop stop-color="#9B86FF"/><stop offset=".55" stop-color="#5AA8FF"/><stop offset="1" stop-color="#35E8DD"/></linearGradient></defs>
+  <rect x="4" y="4" width="84" height="84" rx="23" fill="#111D33" stroke="#FFFFFF" stroke-opacity=".14"/>
+  <path d="M21 19H35V59H61V73H21V19Z" fill="white"/>
+  <path d="M45 19H73V32H58V40H70V53H45V19Z" fill="url(#mark)"/>
+  <path d="M65 60L73 68L65 76" stroke="#35E8DD" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="106" y="51" fill="white" font-family="Inter, Arial, sans-serif" font-size="39" font-weight="800" letter-spacing="-1.4">LEVEL<tspan fill="#73A3FF">SERVE</tspan></text>
+  <text x="109" y="73" fill="#AEB9CC" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="4.5">TECHNOLOGIES</text>
+</svg>

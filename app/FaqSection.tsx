@@ -5,44 +5,44 @@ import styles from "./faq.module.css";
 
 const faqs = [
   {
-    question: "What is Servixa and what services does it provide?",
-    answer: "Servixa is a digital solutions and technology company that helps businesses plan, build, modernize and support digital products. Core services include custom software development, website and web app development, mobile app development, AI automation, cloud and DevOps, cybersecurity, UI/UX design, enterprise platforms, data analytics, IT staff augmentation and global IT support.",
+    question: "What is LevelServe and what services does it provide?",
+    answer: "LevelServe is a digital solutions and technology company that helps businesses plan, build, modernize and support digital products. Core services include custom software development, website and web app development, mobile app development, AI automation, cloud and DevOps, cybersecurity, UI/UX design, enterprise platforms, data analytics, IT staff augmentation and global IT support.",
   },
   {
-    question: "Can Servixa build a professional website or web application for my business?",
-    answer: "Yes. Servixa designs and develops responsive business websites, e-commerce experiences, SaaS products and custom web applications. Projects can cover product strategy, UX/UI, frontend and backend development, integrations, performance, accessibility, deployment and ongoing support.",
+    question: "Can LevelServe build a professional website or web application for my business?",
+    answer: "Yes. LevelServe designs and develops responsive business websites, e-commerce experiences, SaaS products and custom web applications. Projects can cover product strategy, UX/UI, frontend and backend development, integrations, performance, accessibility, deployment and ongoing support.",
   },
   {
-    question: "Does Servixa develop Android and iOS mobile apps?",
-    answer: "Yes. Servixa develops Android, iOS and cross-platform mobile applications, including Flutter-based products. The team can support product planning, interface design, APIs, authentication, cloud integrations, testing, release preparation and future improvements.",
+    question: "Does LevelServe develop Android and iOS mobile apps?",
+    answer: "Yes. LevelServe develops Android, iOS and cross-platform mobile applications, including Flutter-based products. The team can support product planning, interface design, APIs, authentication, cloud integrations, testing, release preparation and future improvements.",
   },
   {
-    question: "Can Servixa help with AI, automation and intelligent assistants?",
-    answer: "Yes. Servixa builds practical AI solutions such as intelligent assistants, workflow automation, document intelligence, AI-enabled business tools, data-driven products and custom integrations designed around real business processes.",
+    question: "Can LevelServe help with AI, automation and intelligent assistants?",
+    answer: "Yes. LevelServe builds practical AI solutions such as intelligent assistants, workflow automation, document intelligence, AI-enabled business tools, data-driven products and custom integrations designed around real business processes.",
   },
   {
-    question: "Does Servixa provide cloud, DevOps and cybersecurity services?",
-    answer: "Yes. Servixa supports cloud architecture, migrations, CI/CD, monitoring, reliability, integrations and security-focused engineering. The goal is to create infrastructure and delivery systems that are maintainable, observable and ready to scale.",
+    question: "Does LevelServe provide cloud, DevOps and cybersecurity services?",
+    answer: "Yes. LevelServe supports cloud architecture, migrations, CI/CD, monitoring, reliability, integrations and security-focused engineering. The goal is to create infrastructure and delivery systems that are maintainable, observable and ready to scale.",
   },
   {
-    question: "Does Servixa work with startups as well as established companies?",
-    answer: "Yes. Servixa works with startups, growing businesses and established organizations. Engagements can range from a focused website or mobile app to ongoing product engineering, cloud modernization, enterprise platform work and global IT support.",
+    question: "Does LevelServe work with startups as well as established companies?",
+    answer: "Yes. LevelServe works with startups, growing businesses and established organizations. Engagements can range from a focused website or mobile app to ongoing product engineering, cloud modernization, enterprise platform work and global IT support.",
   },
   {
-    question: "How much does a Servixa software, website or mobile app project cost?",
-    answer: "Project cost depends on scope, product complexity, integrations, design requirements, timeline and support needs. Servixa reviews the business goals and required features first, then prepares a project approach and proposal suited to the engagement.",
+    question: "How much does a LevelServe software, website or mobile app project cost?",
+    answer: "Project cost depends on scope, product complexity, integrations, design requirements, timeline and support needs. LevelServe reviews the business goals and required features first, then prepares a project approach and proposal suited to the engagement.",
   },
   {
-    question: "How long does it take Servixa to build a digital product?",
-    answer: "Timelines depend on scope. A focused website can often be delivered faster than a complex mobile app, SaaS platform or enterprise system. Servixa defines milestones and a realistic delivery plan after discovery and scope review.",
+    question: "How long does it take LevelServe to build a digital product?",
+    answer: "Timelines depend on scope. A focused website can often be delivered faster than a complex mobile app, SaaS platform or enterprise system. LevelServe defines milestones and a realistic delivery plan after discovery and scope review.",
   },
   {
-    question: "What technologies does Servixa work with?",
-    answer: "Servixa works with modern technologies including Next.js, React, Flutter, TypeScript, Node.js, Python, .NET, PostgreSQL, GraphQL, Docker, Kubernetes, AWS, Azure and Supabase, selecting tools according to each product's requirements.",
+    question: "What technologies does LevelServe work with?",
+    answer: "LevelServe works with modern technologies including Next.js, React, Flutter, TypeScript, Node.js, Python, .NET, PostgreSQL, GraphQL, Docker, Kubernetes, AWS, Azure and Supabase, selecting tools according to each product's requirements.",
   },
   {
-    question: "How can I contact Servixa about a new project?",
-    answer: "You can contact Servixa through the project inquiry form on this website, email servixaa@gmail.com, or use the WhatsApp consultation option. Share your goals, required features and preferred timeline so the team can guide you toward the right service.",
+    question: "How can I contact LevelServe about a new project?",
+    answer: "You can contact LevelServe through the project inquiry form on this website, email servixaa@gmail.com, or use the WhatsApp consultation option. Share your goals, required features and preferred timeline so the team can guide you toward the right service.",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function FaqSection() {
   if (pathname !== "/") return null;
 
   return (
-    <section id="faq" className={styles.section} aria-labelledby="servixa-faq-heading">
+    <section id="faq" className={styles.section} aria-labelledby="levelserve-faq-heading">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -74,9 +74,9 @@ export default function FaqSection() {
         <div className={styles.heading}>
           <div>
             <p className={styles.kicker}>Frequently asked questions</p>
-            <h2 id="servixa-faq-heading">Everything you need to know before building with <span>Servixa.</span></h2>
+            <h2 id="levelserve-faq-heading">Everything you need to know before building with <span>LevelServe.</span></h2>
           </div>
-          <p>Clear answers about our software, web, mobile, AI, cloud and technology services—so you can quickly decide how Servixa can help your business.</p>
+          <p>Clear answers about our software, web, mobile, AI, cloud and technology services—so you can quickly decide how LevelServe can help your business.</p>
         </div>
 
         <div className={styles.grid}>

@@ -3,7 +3,7 @@ import styles from "../legal.module.css";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
-  description: "Terms governing use of the Servixa website and submission of project inquiries.",
+  description: "Terms governing use of the LevelServe website and submission of project inquiries.",
   robots: { index: true, follow: true },
 };
 
@@ -11,15 +11,15 @@ export default function TermsPage() {
   return (
     <main className={styles.page}>
       <div className={styles.shell}>
-        <a className={styles.back} href="/">← Back to Servixa</a>
+        <a className={styles.back} href="/">← Back to LevelServe</a>
         <p className={styles.eyebrow}>Legal · Terms</p>
         <h1 className={styles.title}>Terms & Conditions</h1>
-        <p className={styles.intro}>These Terms & Conditions govern your use of the public Servixa website and the information and inquiry features available through it.</p>
+        <p className={styles.intro}>These Terms & Conditions govern your use of the public LevelServe website and the information and inquiry features available through it.</p>
         <p className={styles.updated}>Last updated: 23 August 2026</p>
 
         <section className={styles.card}>
           <h2>1. About this website</h2>
-          <p>Servixa provides information about software development, web and mobile development, AI automation, cloud, cybersecurity, design, enterprise technology and IT services. Website content is provided for general business information and inquiry purposes.</p>
+          <p>LevelServe provides information about software development, web and mobile development, AI automation, cloud, cybersecurity, design, enterprise technology and IT services. Website content is provided for general business information and inquiry purposes.</p>
         </section>
 
         <section className={styles.card}>
@@ -34,7 +34,7 @@ export default function TermsPage() {
 
         <section className={styles.card}>
           <h2>4. Intellectual property</h2>
-          <p>Unless otherwise stated, the Servixa name, branding, website design, written content, graphics and original website materials are owned by or used by Servixa. You may view the site for ordinary personal or business evaluation, but you may not reproduce or commercially exploit protected material without permission.</p>
+          <p>Unless otherwise stated, the LevelServe name, branding, website design, written content, graphics and original website materials are owned by or used by LevelServe. You may view the site for ordinary personal or business evaluation, but you may not reproduce or commercially exploit protected material without permission.</p>
         </section>
 
         <section className={styles.card}>
@@ -44,12 +44,12 @@ export default function TermsPage() {
 
         <section className={styles.card}>
           <h2>6. External links</h2>
-          <p>The website may include links to third-party websites and communication platforms. Those services are operated independently and are subject to their own terms and policies. A link does not mean Servixa controls or guarantees the third-party service.</p>
+          <p>The website may include links to third-party websites and communication platforms. Those services are operated independently and are subject to their own terms and policies. A link does not mean LevelServe controls or guarantees the third-party service.</p>
         </section>
 
         <section className={styles.card}>
           <h2>7. Liability</h2>
-          <p>To the extent permitted by applicable law, Servixa is not liable for indirect, incidental or consequential loss arising solely from use of, or inability to use, this public informational website. Nothing in these terms excludes liability that cannot legally be excluded.</p>
+          <p>To the extent permitted by applicable law, LevelServe is not liable for indirect, incidental or consequential loss arising solely from use of, or inability to use, this public informational website. Nothing in these terms excludes liability that cannot legally be excluded.</p>
         </section>
 
         <section className={styles.card}>
