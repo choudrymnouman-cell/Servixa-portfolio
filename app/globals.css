@@ -295,3 +295,9 @@ body{background:#f7f7f3;background-image:radial-gradient(circle at 15% 5%,#7557f
 .hero-brand-note{position:absolute;z-index:2;right:46px;bottom:38px;display:flex;align-items:center;gap:12px;padding:11px 15px 11px 11px;border:1px solid #c6eaff2b;border-radius:16px;background:#06152bb8;box-shadow:0 16px 40px #0005;backdrop-filter:blur(16px)}
 .hero-brand-note>span{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,#7f65ff,#2de2d7);color:#fff;font-weight:850;letter-spacing:-.06em}.hero-brand-note div{display:flex;flex-direction:column;gap:3px}.hero-brand-note strong{font-size:12px;letter-spacing:.02em}.hero-brand-note small{color:#9fb0c5;font-size:9px;letter-spacing:.12em;text-transform:uppercase}
 @media(max-width:700px){.hero{min-height:660px;padding:46px 22px 42px;background-image:linear-gradient(180deg,rgba(3,11,25,.96) 0%,rgba(3,11,25,.91) 58%,rgba(3,11,25,.68) 100%),url('/levelserve-hero.webp');background-position:64% center;border-radius:23px}.hero h1{font-size:clamp(43px,13vw,58px)}.hero-bottom{max-width:100%}.hero-brand-note{position:relative;right:auto;bottom:auto;width:max-content;max-width:100%;margin-top:34px}.hero .eyebrow{font-size:8px}.hero .button{color:#fff}.nav .brand-logo{width:132px}}
+
+/* Larger, clearly readable LevelServe wordmark */
+.nav{min-height:86px}.nav .brand-logo{width:220px;max-width:none}.footer .brand-logo{width:220px}
+@media(max-width:900px){.nav{min-height:78px}.nav .brand-logo{width:205px}}
+@media(max-width:700px){.nav{height:72px;min-height:72px;padding-inline:13px}.nav .brand-logo{width:180px}.footer .brand-logo{width:210px}}
+@media(max-width:370px){.nav .brand-logo{width:164px}}
